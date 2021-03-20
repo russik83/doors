@@ -1,44 +1,7 @@
 from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-db = SQLAlchemy(app)
-
-
-class Category(db.Model):
-    __tablename__ = 'categories'
-    id = db.Column(db.Integer, primary_key=True)
-    img_src = db.Column(db.String, unique=True, nullable=True)
-    name = db.Column(db.String, nullable=False)
-    description = db.Column(db.Text, nullable=True)
-    door_list = db.relationship("Door", backref="door_id")
-
-    def __repr__(self):
-        return '<Category {} {}>'.format(self.name, self.description)
-
-
-class Door(db.Model):
-    __tablename__ = 'doors_table'
-    id = db.Column(db.Integer, primary_key=True)
-    category_id = db.Column(db.Integer, db.ForeignKey('categories.id', ondelete='CASCADE'))
-    img_src = db.Column(db.String, unique=True, nullable=False)
-    name = db.Column(db.String, nullable=False)
-    drawing = db.Column(db.String, nullable=False)
-    colour = db.Column(db.String, nullable=False)
-    material = db.Column(db.String, nullable=False)
-    dimensions = db.Column(db.String, nullable=False)
-    findings = db.Column(db.String, nullable=False)
-    box = db.Column(db.String, nullable=False)
-    availability = db.Column(db.String, nullable=False)
-    term = db.Column(db.String, nullable=False)
-    price = db.Column(db.Integer, nullable=False)
-
-    def __repr__(self):
-        return '<Door {} {}>'.format(self.name, self.description)
 
 
 @app.route("/") 
@@ -46,11 +9,6 @@ def index():
     title = "Мир дверей"
     heading = "МЕЖКОМНАТНЫЕ СТЕКЛЯННЫЕ ДВЕРИ" 
     return render_template('index.html', page_title=title, heading=heading)
-
-
-@app.route('/doors_table/<int:doors_table_id>')
-def single_doors_table(doors_table_id):
-    return render_template('single_doors_table.html')
 
 
 @app.route('/delivery')
@@ -65,6 +23,97 @@ def glass():
     title = "Мир дверей"
     heading = "МЕЖКОМНАТНЫЕ СТЕКЛЯННЫЕ ДВЕРИ"
     return render_template('glass.html', page_title=title, heading=heading)
+
+
+@app.route('/single_light')
+def single_light():
+    title = "Мир дверей"
+    heading = "ПРОСТЫЕ СТЕКЛЯННЫЕ ДВЕРИ"
+    return render_template('single_light.html', page_title=title, heading=heading)
+
+
+@app.route('/single_letters')
+def single_letters():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ LETTERS"
+    return render_template('single_letters.html', page_title=title, heading=heading)
+
+
+@app.route('/single_fantasy')
+def single_fantasy():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ FANTASY"
+    return render_template('single_fantasy.html', page_title=title, heading=heading)
+
+
+@app.route('/single_satin')
+def single_satin():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ SATIN"
+    return render_template('single_satin.html', page_title=title, heading=heading)
+
+
+@app.route('/single_florid')
+def single_florid():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ FLORID"
+    return render_template('single_florid.html', page_title=title, heading=heading)
+
+
+@app.route('/single_tripleks')
+def single_tripleks():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ ТРИПЛЕКС"
+    return render_template('single_tripleks.html', page_title=title, heading=heading)
+
+
+@app.route('/single_illusion')
+def single_illusion():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ ILLUSION"
+    return render_template('single_illusion.html', page_title=title, heading=heading)
+
+
+@app.route('/single_classic')
+def single_classic():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ В КЛАССИЧЕСКОМ СТИЛЕ"
+    return render_template('single_classic.html', page_title=title, heading=heading)
+
+
+@app.route('/single_flowers')
+def single_flowers():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ FLOWERS"
+    return render_template('single_flowers.html', page_title=title, heading=heading)
+
+
+@app.route('/single_foto')
+def single_foto():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ С ФОТОПЕЧАТЬЮ"
+    return render_template('single_foto.html', page_title=title, heading=heading)
+
+
+@app.route('/single_mirra')
+def single_mirra():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ MIRRA"
+    return render_template('single_mirra.html', page_title=title, heading=heading)
+
+
+@app.route('/single_loft')
+def single_loft():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ ЛОФТ"
+    return render_template('single_loft.html', page_title=title, heading=heading)
+
+
+@app.route('/single_decor')
+def single_decor():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ ART DÉCOR"
+    return render_template('single_decor.html', page_title=title, heading=heading)
 
 
 if __name__=="__main__": 
