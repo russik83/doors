@@ -165,6 +165,104 @@ def single_office():
     return render_template('peregorodki/single_office.html', page_title=title, heading=heading)
 
 
+@app.route('/sauna')
+def sauna():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ ДЛЯ САУНЫ И БАНИ"
+    return render_template('sauna.html', page_title=title, heading=heading)
+
+
+@app.route('/sauna/single_ajio')
+def single_ajio():
+    title = "Мир дверей"
+    heading = "ОФИСНЫЕ СТЕКЛЯННЫЕ ПЕРЕГОРОДКИ"
+    return render_template('sauna/single_ajio.html', page_title=title, heading=heading)
+
+
+@app.route('/sauna/single_sauna_light')
+def single_sauna_light():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ LIGHT ДЛЯ БАНИ"
+    return render_template('sauna/single_sauna_light.html', page_title=title, heading=heading)
+
+
+@app.route('/sauna/single_steam')
+def single_steam():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ В ПАРНУЮ"
+    return render_template('sauna/single_steam.html', page_title=title, heading=heading)
+
+
+@app.route('/sauna/single_glassjet')
+def single_glassjet():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ GLASSJET ДЛЯ САУНЫ"
+    return render_template('sauna/single_glassjet.html', page_title=title, heading=heading)
+
+
+@app.route('/sauna/single_hamam')
+def single_hamam():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ ХАМАМ"
+    return render_template('sauna/single_hamam.html', page_title=title, heading=heading)
+
+
+@app.route('/sauna/single_glassjet_colored')
+def single_glassjet_colored():
+    title = "Мир дверей"
+    heading = "ЦВЕТНЫЕ СТЕКЛЯННЫЕ ДВЕРИ GLASSJET"
+    return render_template('sauna/single_glassjet_colored.html', page_title=title, heading=heading)
+
+
+@app.route('/showers')
+def showers():
+    title = "Мир дверей"
+    heading = "ДУШЕВЫЕ ОГРАЖДЕНИЯ ИЗ СТЕКЛА"
+    return render_template('showers.html', page_title=title, heading=heading)
+
+
+@app.route('/showers/single_corners')
+def single_corners():
+    title = "Мир дверей"
+    heading = "ДУШЕВЫЕ УГОЛКИ ИЗ СТЕКЛА"
+    return render_template('showers/single_corners.html', page_title=title, heading=heading)
+
+
+@app.route('/showers/single_nishu')
+def single_nishu():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДУШЕВЫЕ ДВЕРИ В НИШУ"
+    return render_template('showers/single_nishu.html', page_title=title, heading=heading)
+
+
+@app.route('/showers/single_soul')
+def single_soul():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ДВЕРИ ДЛЯ ДУША"
+    return render_template('showers/single_soul.html', page_title=title, heading=heading)
+
+
+@app.route('/showers/single_shower_partitions')
+def single_shower_partitions():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ПЕРЕГОРОДКИ ДЛЯ ДУША"
+    return render_template('showers/single_shower_partitions.html', page_title=title, heading=heading)
+
+
+@app.route('/showers/single_glass_partitions')
+def single_glass_partitions():
+    title = "Мир дверей"
+    heading = "РАЗДВИЖНЫЕ ДУШЕВЫЕ ПЕРЕГОРОДКИ ИЗ СТЕКЛА"
+    return render_template('showers/single_glass_partitions.html', page_title=title, heading=heading)
+
+
+@app.route('/showers/single_bathroom_blinds')
+def single_bathroom_blinds():
+    title = "Мир дверей"
+    heading = "РАЗДВИЖНЫЕ ДУШЕВЫЕ ПЕРЕГОРОДКИ ИЗ СТЕКЛА"
+    return render_template('showers/single_bathroom_blinds.html', page_title=title, heading=heading)
+
+
 
 if __name__=="__main__": 
     app.run(debug=True)
