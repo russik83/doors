@@ -263,7 +263,105 @@ def single_bathroom_blinds():
     return render_template('showers/single_bathroom_blinds.html', page_title=title, heading=heading)
 
 
+@app.route('/mirrors')
+def mirrors():
+    title = "Мир дверей"
+    heading = "ЗЕРКАЛА"
+    return render_template('mirrors.html', page_title=title, heading=heading)
+
+
+@app.route('/mirrors/single_led')
+def single_led():
+    title = "Мир дверей"
+    heading = "ЗЕРКАЛА С LED ПОДСВЕТКОЙ"
+    return render_template('mirrors/single_led.html', page_title=title, heading=heading)
+
+
+@app.route('/mirrors/single_aralia')
+def single_aralia():
+    title = "Мир дверей"
+    heading = "Зеркало в ванную Aralia"
+    return render_template('mirrors/single_aralia.html', page_title=title, heading=heading)
+
+
+@app.route('/mirrors/single_classic_mirrors')
+def single_classic_mirrors():
+    title = "Мир дверей"
+    heading = "КЛАССИЧЕСКИЕ ЗЕРКАЛА ДЛЯ ДОМА"
+    return render_template('mirrors/single_classic_mirrors.html', page_title=title, heading=heading)
+
+
+@app.route('/mirrors/single_mirror_tiles')
+def single_mirror_tiles():
+    title = "Мир дверей"
+    heading = "ЗЕРКАЛЬНАЯ ПЛИТКА С ФАЦЕТОМ"
+    return render_template('mirrors/single_mirror_tiles.html', page_title=title, heading=heading)
+
+
+@app.route('/mirrors/single_exclusive')
+def single_exclusive():
+    title = "Мир дверей"
+    heading = "ЗЕРКАЛЬНАЯ ПЛИТКА С ФАЦЕТОМ"
+    return render_template('mirrors/single_exclusive.html', page_title=title, heading=heading)
+
+
+@app.route('/mirrors/single_sophistication')
+def single_sophistication():
+    title = "Мир дверей"
+    heading = "КОЛЛЕКЦИЯ ЗЕРКАЛ SOPHISTICATION ДЛЯ ДИЗАЙНЕРОВ"
+    return render_template('mirrors/single_sophistication.html', page_title=title, heading=heading)
+
+
+@app.route('/constructions')
+def constructions():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ КОНСТРУКЦИИ НА ЗАКАЗ"
+    return render_template('constructions.html', page_title=title, heading=heading)
+
+
+@app.route('/constructions/single_pendulum')
+def single_pendulum():
+    title = "Мир дверей"
+    heading = "МАЯТНИКОВЫЕ СТЕКЛЯННЫЕ ДВЕРИ"
+    return render_template('constructions/single_pendulum.html', page_title=title, heading=heading)
+
+
+@app.route('/constructions/single_stairs')
+def single_stairs():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ЛЕСТНИЦЫ И ОГРАЖДЕНИЯ"
+    return render_template('constructions/single_stairs.html', page_title=title, heading=heading)
+
+
+@app.route('/constructions/single_aprons')
+def single_aprons():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ ФАРТУКИ СКИНАЛИ"
+    return render_template('constructions/single_aprons.html', page_title=title, heading=heading)
+
+
+@app.route('/constructions/single_office_rooms')
+def single_office_rooms():
+    title = "Мир дверей"
+    heading = "ПЕРЕГОВОРНЫЕ ДЛЯ ОФИСА ИЗ СТЕКЛА"
+    return render_template('constructions/single_office_rooms.html', page_title=title, heading=heading)
+
+
+@app.route('/constructions/single_cabinets')
+def single_cabinets():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ КАБИНЕТЫ"
+    return render_template('constructions/single_cabinets.html', page_title=title, heading=heading)
+
+
+@app.route('/installation')
+def installation():
+    title = "Мир дверей"
+    heading = "СТЕКЛЯННЫЕ КОНСТРУКЦИИ НА ЗАКАЗ"
+    return render_template('installation.html', page_title=title, heading=heading)
+
+
 
 if __name__=="__main__": 
-    app.run(debug=True)
+    app.run(debug=False)
     
